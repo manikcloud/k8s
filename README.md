@@ -58,6 +58,10 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl versio
 kubectl get nodes
 Command
 
+```
+# History Command details for installation 
+
+```
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
   457  sudo echo deb http://apt.kubernetes.io/ kubernetes-xenial main > /etc/apt/sources.list.d/kubernetes.list
   458  sudo apt-get update
