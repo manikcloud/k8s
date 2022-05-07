@@ -86,11 +86,12 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-sudo kubectl get nodes
+sleep 1
 
 kubeadm join 172.31.64.38:6443 --token 425qb8.51rbrxc5h862g202 --discovery-token-ca-cert-hash sha256:a502867d97b05820f186e3ee748afddd9142aae4104aee804d30662148138bae
 
-sudo kubectl get nodes
+kubectl get pods -n kube-system
+
 ```
 # Creating network
 ```
