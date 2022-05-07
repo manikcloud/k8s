@@ -187,6 +187,8 @@ kubectl edit replicaset sl-replicaset
 kubectl get replicaset sl-replicaset
 kubectl scale replicaset sl-replicaset --replicas=2
 kubectl get replicaset sl-replicaset
+ 
+kubectl get replicaset sl-replicaset
 ```
 
 
