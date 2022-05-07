@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: web2
+  labels:
+    application: web-app  
+  
+spec:
+  containers:
+    - name: httpd
+      image: httpd
+      

@@ -169,6 +169,26 @@ history | cut -c 8- > history.txt
 
 ```
 
+# ReplicaSet
+
+```
+
+kubectl apply -f ReplicaSet/ReplicaSet.yaml 
+kubectl get pods
+kubectl get replicaset 
+kubectl delete pod sl-replicaset-hnd76
+kubectl descr
+kubectl apply -f pods/pod-def.yaml 
+kubectl get pods
+kubectl apply -f pods/pod-def.yaml 
+kubectl get pods
+kubectl get replicaset sl-replicaset
+kubectl edit replicaset sl-replicaset
+kubectl get replicaset sl-replicaset
+kubectl scale replicaset sl-replicaset --replicas=2
+kubectl get replicaset sl-replicaset
+```
+
 
 # References
 1. https://kubernetes.io/
