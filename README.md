@@ -87,4 +87,10 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
   478  sudo kubectl get pods
   479  sudo kubectl get nodes
   480  history 
-
+```
+# References
+1. https://kubernetes.io/
+2. https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+3. https://kubernetes.io/docs/concepts/workloads/pods/
+4. https://etcd.io/
+5. https://kubernetes.io/docs/reference/kubectl/
