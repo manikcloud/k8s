@@ -104,7 +104,7 @@ kubectl get namespace
 
 kubeadm token list
 kubectl get namespaces
-kubectl get pods -o wide
+
 kubectl get replicationcontroller,services
 kubectl get pods -n kube-public
 kubectl get pods -n kube-system
@@ -112,8 +112,7 @@ kubectl get pods --all-namespaces
 
 kubectl run nginx --image=nginx
 kubectl get pods --all-namespaces
-kubectl get pods
-kubectl get pods -o wide
+
 kubectl get pods
 kubectl get pods -o wide
 kubectl describe pod nginx
@@ -139,8 +138,7 @@ sudo rm -rf ~/.kube
 docker ps
 system restart docker 
 systemctl restart docker 
-history 
-history | cut -c 8-
+
 history | cut -c 8- > history.txt
 
 
