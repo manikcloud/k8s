@@ -102,6 +102,82 @@ kubectl run httpd --image=httpd
 
 
 ```
+# Cleanup - Delete everything 
+
+```
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+sudo echo deb http://apt.kubernetes.io/ kubernetes-xenial main > /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt install docker.io kubectl=1.20.5-00 kubeadm=1.20.5-00 kubelet=1.20.5-00
+sudo apt-get update
+kubeadm init
+
+service docker start
+service docker status 
+
+kubeadm init
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+sudo kubectl get nodes
+
+kubeadm join 172.31.64.38:6443 --token 425qb8.51rbrxc5h862g202 --discovery-token-ca-cert-hash sha256:a502867d97b05820f186e3ee748afddd9142aae4104aee804d30662148138bae
+sudo kubectl get nodes
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d '\n')"
+sudo kubectl get nodes
+```
+# kubectl commands
+
+```
+kubectl get namespace
+
+kubeadm token list
+kubectl get namespaces
+kubectl get pods -o wide
+kubectl get replicationcontroller,services
+kubectl get pods -n kube-public
+kubectl get pods -n kube-system
+kubectl get pods --all-namespaces
+
+kubectl run nginx --image=nginx
+kubectl get pods --all-namespaces
+kubectl get pods
+kubectl get pods -o wide
+kubectl get pods
+kubectl get pods -o wide
+kubectl describe pod nginx
+kubectl get pods
+kubectl run nginx --image=httpd
+kubectl run httpd --image=httpd
+kubectl get pods
+
+service docker status
+sudo kubectl get nodes
+
+```
+# Cleanup 
+````
+docker ps 
+kubeadm reset -f
+rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
+v
+apt remove -y kubeadm kubectl kubelet kubernetes-cni
+sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube* 
+sudo apt-get autoremove
+sudo rm -rf ~/.kube
+docker ps
+system restart docker 
+systemctl restart docker 
+history 
+history | cut -c 8-
+history | cut -c 8- > history.txt
+
+
+```
+
+
 # References
 1. https://kubernetes.io/
 2. https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
