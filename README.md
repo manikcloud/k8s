@@ -152,3 +152,4 @@ history | cut -c 8- > history.txt
 3. https://kubernetes.io/docs/concepts/workloads/pods/
 4. https://etcd.io/
 5. https://kubernetes.io/docs/reference/kubectl/
+6. https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
