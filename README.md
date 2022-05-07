@@ -126,6 +126,30 @@ service docker status
 sudo kubectl get nodes
 
 ```
+# Dashboard
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml
+
+kubectl proxy
+
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | awk '/^deployment-controller-token-/{print $1}') | awk '$1=="token:"{print $2}'
+
+kubectl -n kube-system describe secret $(
+  kubectl -n kube-system get secret | \
+  awk '/^deployment-controller-token-/{print $1}'
+) | \
+awk '$1=="token:"{print $2}'
+
+```
+There are 4 distinct commands and they get called in this order:
+
+Line 2 - This is the first command from @silverfox's Token section.
+Line 3 - Print only the first field of the line beginning with deployment-controller-token- (which is the pod name)
+Line 1 - This is the second command from @silverfox's Token section.
+Line 5 - Print only the second field of the line whose first field is "token:"
+
 # Cleanup 
 ```
 docker ps 
