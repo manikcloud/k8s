@@ -59,40 +59,6 @@ kubectl get nodes
 Command
 
 ```
-# History Command details for installation 
-
-```
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-  457  sudo echo deb http://apt.kubernetes.io/ kubernetes-xenial main > /etc/apt/sources.list.d/kubernetes.list
-  458  sudo apt-get update
-  459  sudo apt install docker.io kubectl=1.20.5-00 kubeadm=1.20.5-00 kubelet=1.20.5-00
-  460  sudo apt-get update
-  461  kubeadm init
-  462  ll
-  463  ll -a
-  464  service docker status 
-  465  service docker start
-  466  service docker status 
-  467  kubeadm init
-  468  mkdir -p $HOME/.kube
-  469  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
-  470  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-  471  ll
-  472  sudo kubectl get nodes
-
-  474  kubeadm join 172.31.64.38:6443 --token 425qb8.51rbrxc5h862g202 --discovery-token-ca-cert-hash sha256:a502867d97b05820f186e3ee748afddd9142aae4104aee804d30662148138bae
-  475  sudo kubectl get nodes
-
-
-
-  
-  476  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d '\n')"
-  477  sudo kubectl get nodes
-  478  sudo kubectl get pods
-  479  sudo kubectl get nodes
-  480  history 
-```
-
 # pod creation 
 ```
 kubectl run nginx --image=nginx
@@ -158,7 +124,7 @@ sudo kubectl get nodes
 
 ```
 # Cleanup 
-````
+```
 docker ps 
 kubeadm reset -f
 rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
