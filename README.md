@@ -92,6 +92,16 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
   479  sudo kubectl get nodes
   480  history 
 ```
+
+# pod creation 
+```
+kubectl run nginx --image=nginx
+
+kubectl run httpd --image=httpd
+
+
+
+```
 # References
 1. https://kubernetes.io/
 2. https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
