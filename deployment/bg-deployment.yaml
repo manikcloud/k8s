@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: httpd
-          image: varunmanik/httpd:blue   
+          image: varunmanik/httpd:green   
   selector:
     matchLabels:
       application: web-app  
