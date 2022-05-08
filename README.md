@@ -235,26 +235,29 @@ kubectl describe deployment
 
 kubectl create -f deployment/deployment.yaml 
 kubectl get pods -o wide 
+
 kubectl rollout history deployment/web-app-deployment 
+
 kubectl delete deployment web-app-deployment
 kubectl get pods -o wide 
+
 kubectl create -f deployment/deployment.yaml  --record
 kubectl rollout history deployment/web-app-deployment 
+
 kubectl edit deployment web-app-deployment  --record
 kubectl rollout history deployment/web-app-deployment 
 kubectl rollout status deployment/web-app-deployment 
 kubectl get pods -o wide 
+
 kubectl describe deployment web-app-deployment 
 kubectl rollout status deployment/web-app-deployment 
 
 kubectl set image deployment web-app-deployment blue=varunmanik/httpd:v1-blue --record
-
 kubectl get pods -o wide
 kubectl rollout history deployment web-app-deployment 
 
-kubectl rollout undo deployment web-app-deployment 
-
-kubectl rollout history deployment web-app-deployment
+# scaling 
+kubectl scale deployment web-app-deployment --replicas=6
 
 ```
 
