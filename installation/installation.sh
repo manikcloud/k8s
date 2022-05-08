@@ -33,8 +33,8 @@ echo " install the weavenet plugin in order to create a network..."
 sleep 1
 
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 |tr -d '\n')"
-sleep 60
+# sleep 60
 
 echo "Adding network in K8s cluster.....please wait for some time...!"
-sleep 2 
+sleep 20 
 sudo kubectl get nodes
