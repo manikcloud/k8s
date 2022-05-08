@@ -296,6 +296,20 @@ history | cut -c 8- > history.txt
 - kubectl describe pod green-app | grep -i "IP:"
 
 ```
+
+# Services 
+
+```
+kubectl create -f services/service-def.yaml 
+kubectl describe svc web-app-service
+kubectl get svc,pods -o wide
+kubectl delete service web-app-service
+kubectl get svc,pods -o wide
+kubectl scale   deployment/blue-green-deployment --replicas=1
+kubectl get svc,pods -o wide
+kubectl get svc,pods,deployment -o wide
+
+```
 # References
 1. https://kubernetes.io/
 2. https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
