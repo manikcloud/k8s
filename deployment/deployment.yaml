@@ -18,8 +18,9 @@ spec:
       labels:
         application: web-app 
         env: dev 
+        color: blue
       
     spec:
       containers:
-        - name:Blue
-          image: varunmanik/ht    
+        - name: blue
+          image: varunmanik/httpd:v1-blue   
