@@ -126,6 +126,57 @@ service docker status
 sudo kubectl get nodes
 
 ```
+# Pod Creation in Kubernetes
+
+```
+Steps to be followed:
+1.	Creating multi-container pods
+2.	Creating a single container pod
+
+Step 1: Creating multi-container pods
+1.1	On the master node, create a new file named sample.yaml:
+
+sudo su
+vi sample.yaml
+1.2	Add the following code in the multi-container.yaml file:
+https://github.com/manikcloud/k8s/blob/main/pods/multi-container.yaml
+
+1.3	Use the following command to create the multi-container pod:
+
+kubectl create -f sample.yaml
+ 
+
+Step 2: Creating a single container pod
+2.1	On the master node, create a single container pod with a tomcat image using the following command:
+kubectl run tomcat --image=tomcat:8.0
+ 
+
+2.2	Check all the running pods
+kubectl get pods
+ 
+2.3	To check why exactly a pod is in the pending state, run the command
+kubectl describe pods <pod_name>
+To check why multi-container pod is pending,use the command
+kubectl describe pods multi-container
+```
+ 
+ 
+## 2.4	To remove the taint from the node run the following commands:
+```
+kubectl get nodes
+
+Copy the node name and use it in the below command
+kubectl taint nodes  <node name> node-role.kubernetes.io/master-
+
+Here for example we use the command given below
+
+kubectl taint nodes  ip-172-31-17-206 node-role.kubernetes.io/master-
+ 
+2.5	Now check the pod status. The pods should be in the running state.
+sudo kubectl get pods 
+
+```
+
 # Dashboard
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml
