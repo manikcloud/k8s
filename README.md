@@ -286,7 +286,14 @@ history | cut -c 8- > history.txt
 
 
 ```
+# Docker 
+```
+- docker build -t varunmanik/httpd:green .
+- docker run -itd -p 9000:80 varunmanik/httpd:green
+- docker build -t varunmanik/httpd:blue .
+- docker run -itd -p 9001:80 varunmanik/httpd:blue
 
+```
 # References
 1. https://kubernetes.io/
 2. https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
