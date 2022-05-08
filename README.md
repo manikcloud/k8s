@@ -150,25 +150,6 @@ Line 3 - Print only the first field of the line beginning with deployment-contro
 Line 1 - This is the second command from @silverfox's Token section.
 Line 5 - Print only the second field of the line whose first field is "token:"
 
-# Cleanup 
-```
-docker ps 
-kubeadm reset -f
-rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
-v
-apt remove -y kubeadm kubectl kubelet kubernetes-cni
-sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube* 
-sudo apt-get autoremove
-sudo rm -rf ~/.kube
-docker ps
-system restart docker 
-systemctl restart docker 
-
-history | cut -c 8- > history.txt
-
-
-```
-
 # ReplicaSet
 
 ```
@@ -191,6 +172,32 @@ kubectl get replicaset sl-replicaset
 kubectl get replicaset sl-replicaset
 ```
 
+
+# Cleanup 
+
+- Run this command to cleanup
+```
+sh installation/cleanup.sh
+```
+- OR copy and paste below commands one by one.
+
+```
+docker ps 
+kubeadm reset -f
+rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
+v
+apt remove -y kubeadm kubectl kubelet kubernetes-cni
+sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube* 
+sudo apt-get autoremove
+sudo rm -rf ~/.kube
+docker ps
+system restart docker 
+systemctl restart docker 
+
+history | cut -c 8- > history.txt
+
+
+```
 
 # References
 1. https://kubernetes.io/

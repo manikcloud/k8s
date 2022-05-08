@@ -36,3 +36,5 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl versio
 sleep 60
 
 echo "Adding network in K8s cluster.....please wait for some time...!"
+sleep 2 
+sudo kubectl get nodes
