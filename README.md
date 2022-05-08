@@ -196,10 +196,10 @@ awk '$1=="token:"{print $2}'
 ```
 There are 4 distinct commands and they get called in this order:
 
-Line 2 - This is the first command from @silverfox's Token section.
-Line 3 - Print only the first field of the line beginning with deployment-controller-token- (which is the pod name)
-Line 1 - This is the second command from @silverfox's Token section.
-Line 5 - Print only the second field of the line whose first field is "token:"
+- Line 1 - This is the second command from @silverfox's Token section.
+- Line 2 - This is the first command from @silverfox's Token section.
+- Line 3 - Print only the first field of the line beginning with deployment-controller-token- (which is the pod name)
+- Line 5 - Print only the second field of the line whose first field is "token:"
 
 # ReplicaSet
 
@@ -222,7 +222,21 @@ kubectl get replicaset sl-replicaset
  
 kubectl get replicaset sl-replicaset
 ```
+# Deployment
+```
+kubectl create -f deployment/deployment.yaml 
+kubectl get pods -o wide
 
+kubectl get deployment
+kubectl get deployment -o wide
+
+
+kubectl describe deployment
+
+
+
+
+```
 
 # Cleanup 
 
