@@ -293,6 +293,8 @@ history | cut -c 8- > history.txt
 - docker build -t varunmanik/httpd:blue .
 - docker run -itd -p 9001:80 varunmanik/httpd:blue
 
+- kubectl describe pod green-app | grep -i "IP:"
+
 ```
 # References
 1. https://kubernetes.io/
