@@ -260,6 +260,31 @@ kubectl rollout history deployment web-app-deployment
 kubectl scale deployment web-app-deployment --replicas=6
 
 ```
+# Docker 
+```
+- docker build -t varunmanik/httpd:green .
+- docker run -itd -p 9000:80 varunmanik/httpd:green
+- docker build -t varunmanik/httpd:blue .
+- docker run -itd -p 9001:80 varunmanik/httpd:blue
+
+- kubectl describe pod green-app | grep -i "IP:"
+
+```
+
+# Services 
+
+```
+kubectl create -f services/service-def.yaml 
+kubectl describe svc web-app-service
+kubectl get svc,pods -o wide
+kubectl delete service web-app-service
+kubectl get svc,pods -o wide
+kubectl scale   deployment/blue-green-deployment --replicas=1
+kubectl get svc,pods -o wide
+kubectl get svc,pods,deployment -o wide
+
+```
+
 
 # Cleanup 
 
@@ -286,30 +311,7 @@ history | cut -c 8- > history.txt
 
 
 ```
-# Docker 
-```
-- docker build -t varunmanik/httpd:green .
-- docker run -itd -p 9000:80 varunmanik/httpd:green
-- docker build -t varunmanik/httpd:blue .
-- docker run -itd -p 9001:80 varunmanik/httpd:blue
 
-- kubectl describe pod green-app | grep -i "IP:"
-
-```
-
-# Services 
-
-```
-kubectl create -f services/service-def.yaml 
-kubectl describe svc web-app-service
-kubectl get svc,pods -o wide
-kubectl delete service web-app-service
-kubectl get svc,pods -o wide
-kubectl scale   deployment/blue-green-deployment --replicas=1
-kubectl get svc,pods -o wide
-kubectl get svc,pods,deployment -o wide
-
-```
 # References
 1. https://kubernetes.io/
 2. https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
