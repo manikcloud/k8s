@@ -259,31 +259,11 @@ kubectl rollout history deployment web-app-deployment
 # scaling 
 kubectl scale deployment web-app-deployment --replicas=6
 
-```
 
-# Cleanup 
+#Roll Out
 
-- Run this command to cleanup
-```
-sh installation/cleanup.sh
-```
-- OR copy and paste below commands one by one.
-
-```
-docker ps 
-kubeadm reset -f
-rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
-v
-apt remove -y kubeadm kubectl kubelet kubernetes-cni
-sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube* 
-sudo apt-get autoremove
-sudo rm -rf ~/.kube
-docker ps
-system restart docker 
-systemctl restart docker 
-
-history | cut -c 8- > history.txt
-
+kubectl rollout undo deployment/web-app-deployment --to-revision=3
+kubectl rollout history deployment web-app-deployment 
 
 ```
 # Docker 
@@ -310,6 +290,34 @@ kubectl get svc,pods -o wide
 kubectl get svc,pods,deployment -o wide
 
 ```
+
+
+# Cleanup 
+
+- Run this command to cleanup
+```
+sh installation/cleanup.sh
+```
+- OR copy and paste below commands one by one.
+
+```
+docker ps 
+kubeadm reset -f
+rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
+v
+apt remove -y kubeadm kubectl kubelet kubernetes-cni
+sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube* 
+sudo apt-get autoremove
+sudo rm -rf ~/.kube
+docker ps
+system restart docker 
+systemctl restart docker 
+
+history | cut -c 8- > history.txt
+
+
+```
+
 # References
 1. https://kubernetes.io/
 2. https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
