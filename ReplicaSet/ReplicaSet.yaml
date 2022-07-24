@@ -11,7 +11,7 @@ spec:
   selector:
     matchLabels:
       application: web-app
-  replicas: 2
+  replicas: 20
   template:
     metadata:
       name: web2

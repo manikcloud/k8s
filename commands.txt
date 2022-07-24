@@ -1,0 +1,679 @@
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add 
+sudo echo deb http://apt.kubernetes.io/ kubernetes-xenial main > /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt install docker.io kubectl=1.20.5-00 kubeadm=1.20.5-00 kubelet=1.20.5-00
+sudo apt-get update
+sudo kubeadm init
+service docker start 
+service docker status
+service docker start 
+service docker status
+sudo kubeadm init
+kubeadm join 172.31.18.86:6443 --token dvzpzl.w59qzsb86ilswctq     --discovery-token-ca-cert-hash sha256:12769b574f5ecff0afcb52bc0ae88764879b8b11ee57d3113517054bd66d8dc3
+kubectl get pods
+kubectl get namespace
+kubectl get pods -ns kube-system
+kubectl get pods --namespace kube-system
+history 
+history | cut -c 8-
+
+test
+    1  clear
+    2  apt-get update
+    3  asudo apt install -y gcc vim curl wget g++ libcairo2-dev libjpeg-turbo8-dev libpng-dev libtool-bin libossp-uuid-dev libavcodec-dev libavutil-dev libswscale-dev build-essential libpango1.0-dev libssh2-1-dev libvncserver-dev libtelnet-dev \
+    4  sudo apt install -y gcc vim curl wget g++ libcairo2-dev libjpeg-turbo8-dev libpng-dev libtool-bin libossp-uuid-dev libavcodec-dev libavutil-dev libswscale-dev build-essential libpango1.0-dev libssh2-1-dev libvncserver-dev libtelnet-dev libssl-dev libvorbis-dev libwebp-dev
+    5  sudo apt install openjdk-11-jdk
+    6  sudo useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+    7  sudo useradd -m -U -d /opt/91532 -s /bin/false 91532
+    8  cd /opt/
+    9  ls
+   10  rm tomcat/
+   11  rm -rf tomcat/
+   12  wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz -P ~
+   13  ls
+   14  wget apache-tomcat-9.0.56.tar.gz
+   15  wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.tar.gz
+   16  sudo mkdir /opt/91532
+   17  sudo tar -xzf apache-tomcat-9.0.53.tar.gz -C /opt/91532/
+   18  ls
+   19  sudo tar -xzf apache-tomcat-9.0.56.tar.gz -C /opt/91532/
+   20  ls
+   21  cd 91
+   22  cd 91532/
+   23  ls
+   24  mv apache-tomcat-9.0.56/ ../
+   25  ls
+   26  cd .
+   27  cd ..
+   28  ls
+   29  rm -r 91532/
+   30  cd apache-tomcat-9.0.56/
+   31  ls
+   32  cd ..
+   33  mv apache-tomcat-9.0.56 91532
+   34  ls
+   35  rm -rf apache-tomcat-9.0.56.tar.gz 
+   36  cd 91532/
+   37  ls
+   38  sudo chmod +x /opt/tomcat/tomcatapp/bin/*.sh
+   39  sudo chmod +x /opt/91532/bin/*.sh
+   40  nano /etc/systemd/system/91532.service
+   41  sudo systemctl daemon-reload
+   42  sudo systemctl enable --now 91532
+   43  systemctl status tomcat
+   44  systemctl status 91532
+   45  systemctl start 91532
+   46  systemctl status 91532
+   47  systemctl status 91532.service 
+   48  systemctl enable 91532
+   49  systemctl enable 91532.service
+   50  systemctl status 91532
+   51  cd
+   52  cat /etc/apt/sources.list
+   53  sudo add-apt-repository ppa:remmina-ppa-team/remmina-next-daily
+   54  sudo apt update
+   55  sudo apt install freerdp2-dev freerdp2-x11 -y
+   56  nano /etc/apt/sources.list
+   57  nano /etc/apt/sources.list.d/remmina-ppa-team-ubuntu-remmina-next-daily-focal.list 
+   58  apt-get ipdate
+   59  apt update
+   60  apt update --upgradable
+   61  apt --upgradable
+   62  apt list --upgradable
+   63  clear
+   64  nano /etc/ssh/ssh_config
+   65  cd /etc/ssh
+   66  ls
+   67  nano sshd_config
+   68  systemctl restart ssh
+   69  cd /opt/91532/conf/
+   70  mkdir ssl
+   71  cd ssk
+   72  cd ssl/
+   73  wget https://simplilearnconfig.s3.amazonaws.com/SSL/SL_SSL_Latest.zip
+   74  unzip si
+   75  ls
+   76  apt install unzip
+   77  y
+   78  ls
+   79  unzip SL_SSL_Latest.zip 
+   80  ls
+   81  nano star_simplilearnlabs_com.key
+   82  cd ..
+   83  ls
+   84  echo > server.xml 
+   85  nano server.xml 
+   86  echo > tomcat-users.xml 
+   87  nano tomcat-users.xml 
+   88  cd ..
+   89  nano 91532.sh
+   90  chmod +x 91532.sh 
+   91  crontab -e
+   92  nano /opt/tampering.sh
+   93  chmod +x /opt/tampering.sh 
+   94  crontab -e
+   95  systemctl restart 91532
+   96  cat conf/server.xml 
+   97  cd
+   98  clear
+   99  cd /opt/
+  100  ls
+  101  wget https://downloads.apache.org/guacamole/1.3.0/source/guacamole-server-1.3.0.tar.gz -P ~
+  102  tar xzf ~/guacamole-server-1.3.0.tar.gz
+  103  cd ~/guacamole-server-1.3.0
+  104  ./configure --with-init-dir=/etc/init.d
+  105  ls
+  106  cd guacamole-server-1.3.0/
+  107  ./configure --with-init-dir=/etc/init.d
+  108  make
+  109  apt install freerdp
+  110  apt install freerdp2
+  111  apt install freerdp2-x11
+  112  apt install freerdp2-shadow-x11
+  113  apt install libfreerdp
+  114  apt install libfreerdp2
+  115  apt install libfreerdp2-2
+  116  clear
+  117  make
+  118  ./configure --with-init-dir=/etc/init.d
+  119  make
+  120  cd ..
+  121  ls
+  122  rm -rf guacamole-server-1.3.0/
+  123  wget https://downloads.apache.org/guacamole/1.2.0/source/guacamole-server-1.2.0.tar.gz
+  124  tar -xvzf guacamole-server-1.2.0.tar.gz 
+  125  cd guacamole-server-1.2.0/
+  126  ./configure --with-init-dir=/etc/init.d
+  127  make
+  128  apt install freerdp2-dev
+  129  make
+  130  ./configure --with-init-dir=/etc/init.d
+  131  make
+  132  apt-get remove freerdp*
+  133  cd ..
+  134  wget https://pub.freerdp.com/releases/freerdp-2.4.0.zip
+  135  ls
+  136  unzip freerdp-2.4.0.zip 
+  137  cd freerdp-2.4.0/
+  138  ls
+  139  make
+  140  cd client/
+  141  l
+  142  scd ..
+  143  cd lib
+  144  cd libfre
+  145  cd ..
+  146  cd libfreerdp/
+  147  ls
+  148  cd ..
+  149  ls
+  150  ls -a
+  151  clear
+  152  ls
+  153  cd scripts/
+  154  ls
+  155  cd ..
+  156  ls
+  157  cd ..
+  158  ls
+  159  rm -rf freerdp-2.4.0 freerdp-2.4.0.zip 
+  160  clear
+  161  apt update
+  162  apt install freerdp
+  163  apt install freerdp2-dev
+  164  apt autoremove
+  165  apt install freerdp2-dev
+  166  apt install aptitude
+  167  apt-get update
+  168  apt list freerdp
+  169  apt list freerdp2
+  170  apt list freerdp2-dev
+  171  aptitude install freerdp2-dev
+  172  ls
+  173  rm -rf guacamole-server-1.2.0 guacamole-server-1.2.0.tar.gz 
+  174  wget https://downloads.apache.org/guacamole/1.3.0/source/guacamole-server-1.3.0.tar.gz -P ~
+  175  tar xzf ~/guacamole-server-1.3.0.tar.gz
+  176  cd guacamole-server-1.3.0/
+  177  ./configure --with-init-dir=/etc/init.d
+  178  make
+  179  sudo make install
+  180  sudo ldconfig
+  181  sudo systemctl daemon-reload
+  182  sudo systemctl start guacd
+  183  sudo systemctl enable guacd
+  184  systemctl status guacd
+  185  sudo mkdir /etc/guacamole
+  186  wget https://downloads.apache.org/guacamole/1.3.0/binary/guacamole-1.3.0.war -P ~
+  187  sudo mv ~/guacamole-1.3.0.war /etc/guacamole/guacamole.war
+  188  ls
+  189  cd 
+  190  cd /etc/guacamole/
+  191  ls
+  192  sudo mv ~/guacamole-1.3.0.war /etc/guacamole/guacamole.war
+  193  sudo mv guacamole-1.3.0.war /etc/guacamole/guacamole.war
+  194  ls
+  195  sudo ln -s /etc/guacamole/guacamole.war /opt/91532/webapps/
+  196  nano /etc/guacamole/guacamole.properties
+  197  sudo ln -s /etc/guacamole /opt/91532/.guacamole
+  198  echo -n guacadmin | openssl md5
+  199  nano user-mapping.xml
+  200  ls
+  201  cat guacamole.
+  202  cat guacamole.properties 
+  203  systemctl restart 91532 guacd
+  204  sudo apt update
+  205  sudo apt -y install xrdp
+  206  sudo systemctl status xrdp
+  207  systemctl enable xrdp
+  208  sudo apt -y install xfce4
+  209  sudo update-alternatives --config x-session-manager
+  210  sudo systemctl enable xrdp
+  211  cd
+  212  passwd ubuntu
+  213  apt install awscli
+  214  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  215  dpkg -i google-chrome-stable_current_amd64.deb 
+  216  google-chrome-stable
+  217  cd
+  218  clear
+  219  crontab -l
+  220  cat /opt/91532/91532.sh
+  221  crontab -e
+  222  crontab -l
+  223  cat /opt/tampering.sh
+  224  wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
+  225  sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
+  226  sudo apt update
+  227  sudo apt install zabbix-agent
+  228  vi /etc/zabbix/zabbix_agentd.conf
+  229  sudo systemctl restart zabbix-agent
+  230  sudo systemctl enable zabbix-agent 
+  231  sudo systemctl status zabbix-agent
+  232  crontab -l
+  233  cd /opt/
+  234  vi 52.183.12.20
+  235  vi check_idletime.py
+  236  vi check_idletime.desktop
+  237  python /opt/check_idletime.py
+  238  python2 /opt/check_idletime.py
+  239  python3 /opt/check_idletime.py
+  240  apt install suckless-tools
+  241  rm -rf check_idletime.
+  242  ls
+  243  rm -rf /tmp/check_idle 
+  244  python3 /opt/check_idletime.py
+  245   /tmp/check_idle 
+  246  rm -rf /tmp/check_idle 
+  247  cd /opt/
+  248  clear
+  249  vi /opt/User_Idle.sh
+  250  vi /opt/check_idletime.desktop 
+  251  cat /opt/check_idletime.desktop 
+  252  python2 /opt/check_idletime.py
+  253  rm -ef /tmp/check_idle 
+  254  rm -rf /tmp/check_idle 
+  255  python3 /opt/Idle_Time.py
+  256  pip3 install python-dateutil
+  257  pip3 install jmespath
+  258  python3 /opt/Idle_Time.py
+  259  clear
+  260  python
+  261  clear
+  262  add-apt-repository ppa:git-core/ppa
+  263  apt update; apt install git
+  264  git --version
+  265  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+  266  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+  267  sudo apt update
+  268  sudo apt install jenkins
+  269  sudo systemctl start jenkins
+  270  sudo systemctl status jenkins
+  271  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  272  passwd ubuntu
+  273  java --version
+  274  docker 
+  275  sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+  276  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  277  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
+  278  sudo apt update
+  279  sudo apt-get install docker-ce
+  280  docker --version
+  281  sudo systemctl start docker
+  282  sudo systemctl enable docker
+  283  sudo systemctl enable jenkins
+  284  sudo apt install maven
+  285  ps -ef | grep apt
+  286  kill -9 17445 17446 
+  287  ps -ef | grep apt
+  288  kill -9 11952 11956
+  289  ps -ef | grep apt
+  290  sudo apt update
+  291  sudo apt install maven
+  292  mvn -version
+  293  pip3 --version
+  294  sudo add-apt-repository ppa:deadsnakes/ppa
+  295  sudo apt install python3.9
+  296  python3.9 --version
+  297  python --version
+  298  python
+  299  python3.9
+  300  sudo add-apt-repository --yes --update ppa:ansible/ansible
+  301  sudo apt update
+  302  sudo apt install -y ansible
+  303  ansible --version
+  304  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  305  python3.9 get-pip.py
+  306  pip3 --version
+  307  pip3
+  308  pip3.9
+  309  pip3.9 install boto3
+  310  sudo apt install python3.9-distutils
+  311  python3.9 -m pip --version
+  312  python3 -m pip --version
+  313  python3
+  314  sudo apt install python3-pip
+  315  sudo apt autoremove
+  316  python3 -m pip --version
+  317  sudo apt install python3.8-pip
+  318  python3 get-pip.py 
+  319  python3 -m pip --version
+  320  pip3 --version
+  321  pip --version
+  322  pip3.9 --version
+  323  pip install boto3
+  324  ls -l ~/.Xauthority
+  325  grep X11Forwarding /etc/ssh/sshd_config
+  326  cp /home/ubuntu/.Xauthority .
+  327  docker ps -a
+  328  docker ps
+  329  sudo apt-get update
+  330  sudo apt-get install -y apt-transport-https ca-certificates curl
+  331  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+  332  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+  333  sudo apt-get update
+  334  sudo apt-get install -y kubelet kubeadm kubectl
+  335  sudo apt-mark hold kubelet kubeadm kubectl
+  336  kubeadm version
+  337  git --version
+  338  exi
+  339  exit
+  340  crontab -l
+  341  wget https://eclipse-sldevopslab.s3.amazonaws.com/eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz
+  342  mv eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz /opt/
+  343  tar -zxvf eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz
+  344  tar -zxvf /opt/eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz 
+  345  cat tar -zxvf eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz
+  346  cat /opt/eclipse/eclipse.desktop
+  347  ll /opt/eclipse/
+  348  ls
+  349  rm -rf eclipse
+  350  cd /opt/
+  351  tar -zxvf /opt/eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz 
+  352  cat /opt/eclipse/eclipse.desktop
+  353  vi /opt/eclipse/eclipse.desktop
+  354  ll /opt/eclipse/eclipse
+  355  ll /opt/eclipse/icon.xpm
+  356  ll /opt/eclipse/eclipse.desktop
+  357  chmod -R 755 /opt/eclipse/eclipse.desktop
+  358  ll /opt/eclipse/eclipse.desktop
+  359  wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-03/M1/eclipse-java-2022-03-M1-linux-gtk-x86_64.tar.gz&mirror_id=1248
+  360  mv /home/ubuntu/Downloads/eclipse-java-2022-03-M1-linux-gtk-x86_64.tar.gz /opt/
+  361  cp /opt/eclipse/eclipse.desktop /opt/
+  362  rm -rf /opt/eclipse
+  363  ll /opt/
+  364  cd /opt/
+  365  tar -zxvf /opt/eclipse-java-2022-03-M1-linux-gtk-x86_64.tar.gz 
+  366  ll
+  367  cp eclipse.desktop eclipse/
+  368  cat eclipse/eclipse.desktop 
+  369  ll /opt/eclipse/eclipse
+  370  ll /opt/eclipse/icon.xpm
+  371  pip
+  372  pip install docker-compose
+  373  docker-compose 
+  374  docker ps 
+  375  docker-compose --version 
+  376  docker-compose -v
+  377  exit
+  378  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add 
+  379  sudo echo deb http://apt.kubernetes.io/ kubernetes-xenial main > /etc/apt/sources.list.d/kubernetes.list
+  380  sudo apt-get update
+  381  sudo apt install docker.io kubectl=1.20.5-00 kubeadm=1.20.5-00 kubelet=1.20.5-00
+  382  sudo apt-get update
+  383  sudo kubeadm init
+  384  service docker start 
+  385  service docker status
+  386  service docker start 
+  387  service docker status
+  388  sudo kubeadm init
+  389  kubeadm join 172.31.18.86:6443 --token dvzpzl.w59qzsb86ilswctq     --discovery-token-ca-cert-hash sha256:12769b574f5ecff0afcb52bc0ae88764879b8b11ee57d3113517054bd66d8dc3
+  390  kubectl get pods
+  391  kubectl get namespace
+  392  kubectl get pods -ns kube-system
+  393  kubectl get pods --namespace kube-system
+  394  history 
+  395  history | cut -c 8-
+  396  cd ..
+  397  vim history.txt
+  398  git add . 
+  399  git commit -am"adding installation cmds"
+  400  git push 
+  401  ll
+  402  git status 
+  403  git push 
+  404  vim history.txt 
+  405  git status 
+  406  git branch -a
+  407  git pull 
+  408  vim .git/config 
+  409  cd ~
+  410  git commit -am"adding installation cmds"
+  411  git clone git@github.com:manikcloud/k8s.git
+  412  cd k8s/
+  413  ll
+  414  cp /opt/k8s/history.txt .
+  415  ll
+  416  git status
+  417  git- version 
+  418  git -version 
+  419  git --version 
+  420  ll
+  421  echo "hi" >test.txt
+  422  ll
+  423  git status 
+  424  mv history.txt commands.tx
+  425  ll
+  426  rm test.txt 
+  427  ll
+  428  git status 
+  429  git add . 
+  430  git commit -am"adding commands"
+  431  git push 
+  432  kubectl get pods --namespace kube-system
+  433  cat /etc/os-release 
+  434  ll
+  435  cd installation/
+  436  sh cleanup.sh 
+  437  sh installation.sh 
+  438  kubectl get pods --namespace kube-system
+  439  kubectl get pods --namespace 
+  440  kubectl get pods --namespace kube-system
+  441  kubectl get pods --namespace kube-system -o
+  442  kubectl get pods -o --namespace kube-system 
+  443  kubectl get pods  --namespace kube-system 
+  444  ll
+  445  exit
+  446  cd /opt/
+  447  git clone git@github.com:manikcloud/k8s.git
+  448  ssh-keygen 
+  449  cat ~/.ssh/id_rsa.pub 
+  450  git clone git@github.com:manikcloud/k8s.git
+  451  ll
+  452  cd k8s/
+  453  ll
+  454  cd installation/
+  455  ll
+  456  sh installation.sh 
+  457  kubectl get pods
+  458  sh cleanup.sh 
+  459  kubectl get pods 
+  460  sudo su
+  461  exit
+  462  ll
+  463  cd k8s/
+  464  ll
+  465  cd installation/
+  466  ll
+  467  sudo kubectl get nodes
+  468  kubectl get pods --all-namespaces
+  469  kubeadm join 172.31.18.86:6443 --token xyyfpn.swsr7ozzk2g6jst2     --discovery-token-ca-cert-hash sha256:420cc20fd45f073a42f395fdbe9b3e642a26db1cb675406a8f4374db5a650f95kubeadm join 172.31.18.86:6443 --token xyyfpn.swsr7ozzk2g6jst2 \
+  470  kubeadm join 172.31.18.86:6443 --token xyyfpn.swsr7ozzk2g6jst2     --discovery-token-ca-cert-hash sha256:420cc20fd45f073a42f395fdbe9b3e642a26db1cb675406a8f4374db5a650f95
+  471  kubectl get pods --all-namespaces
+  472  free -m 
+  473  ll
+  474  cd  $HOME/.kube/
+  475  ll
+  476  les config 
+  477  less config 
+  478  ll
+  479  kubectl get node
+  480  cd -
+  481  kubeadm join 172.31.64.38:6443 --token 425qb8.51rbrxc5h862g202 \
+  482  kubeadm join 172.31.64.38:6443 --token 425qb8.51rbrxc5h862g202     --discovery-token-ca-cert-hash sha256:a502867d97b05820f186e3ee748afddd9142aae4104aee804d30662148138bae
+  483  kubectl run nginx --image=nginx
+  484  kubectl get pods 
+  485  kubectl get pods --all-namespaces
+  486  kubectl get namespaces
+  487  kubectl get pods --all-namespaces
+  488  kubectl get pods 
+  489  kubectl run nginx --image=httpd
+  490  kubectl run httpd --image=httpd
+  491  kubectl get pods 
+  492  kubectl get nodes
+  493  kubeadm join 172.31.64.38:6443 --token 425qb8.51rbrxc5h862g202 --discovery-token-ca-cert-hash sha256:a502867d97b05820f186e3ee748afddd9142aae4104aee804d30662148138bae
+  494  kubectl get nodes
+  495  kubectl get pods 
+  496  kubectl taint nodes --all node-role.kubernetes.io/master-
+  497  kubectl get pods 
+  498  ll
+  499  cd ..
+  500  git pull
+  501  kubeadm token list
+  502  ll
+  503  cd pods
+  504  ll
+  505  vim pod-def.yaml 
+  506  kubectl create -f pod-def.yaml 
+  507  kubectl get pods
+  508  history 
+  509  kubectl get pods
+  510  kubectl get pods -o
+  511  kubectl get pods -O
+  512  kubectl get pods 
+  513  kubectl get pods -o wide
+  514  kubectl create -f pod-def.yaml 
+  515  kubectl run nginx --image=nginx
+  516  kubectl run nginx1 --image=nginx
+  517  kubectl get pods -o wide
+  518  kubectl get replicationcontrolle
+  519  kubectl get replicationcontroller
+  520  kubectl get replicationcontroller --all-namespace
+  521  kubectl get replicationcontroller --all-namespaces
+  522  kubectl get services
+  523  kubectl get pods --all-namespaces
+  524  ll
+  525  vim multi-container.yaml 
+  526  kubectl create -f multi-container.yaml 
+  527  kubectl get pods
+  528  vim web-container.yaml 
+  529  cd ..
+  530  ll
+  531  cd ReplicaSet/
+  532  ll
+  533  vim ReplicaSet.yaml 
+  534  kubectl create -f ReplicaSet.yaml 
+  535  kubectl get pod
+  536  kubectl get pod -o wide
+  537  vim ReplicaSet.yaml 
+  538  kubectl get replicaset
+  539  kubectl get replicaset -o wide
+  540  ll
+  541  cd ..
+  542  ll
+  543  127.0.0.1:8001
+  544  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | awk '/^deployment-controller-token-/{print $1}') | awk '$1=="token:"{print $2}'
+  545  kubectl -n kube-system describe secret 
+  546  kubectl config set-context --current --namespace=NAMESPACE
+  547  kubectl config set-context --current --namespace=kube-system
+  548  kubectl config set-context --current --namespace=kubernetes-dashboard
+  549  kubectl get pods 
+  550  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | awk '/^deployment-controller-token-/{print $1}') | awk '$1=="token:"{print $2}'
+  551  cd k8s/
+  552  cd ReplicaSet/
+  553  ll
+  554  kubectl create -f ReplicaSet.yaml 
+  555  kubectl config set-context --current --namespace=DEFAULT
+  556  kubectl get name-space
+  557  kubectl get name-spaces
+  558  kubectl get namespaces
+  559  kubectl config set-context --current --namespace=default
+  560  kubectl get pods
+  561  kubectl create -f ReplicaSet.yaml 
+  562  kubectl get pods
+  563  pwd
+  564  cd ..
+  565  ll
+  566  vim ReplicaSet/ReplicaSet.yaml 
+  567  cd ReplicaSet/
+  568  vim ReplicaSet-sl-ex.yaml
+  569  kubectl create -f ReplicaSet-sl-ex.yaml 
+  570  kubectl get pods 
+  571  kubectl get pods -o wide
+  572  kubectl get node 
+  573  kubectl get pods -o wide
+  574  kubectl get node -o wide 
+  575  kubectl get replicaset -o wide
+  576  kubectl delete replicaset sl-replicaset
+  577  kubectl get replicaset -o wide
+  578  kubectl get pods -o wide
+  579  cd ..
+  580  ll
+  581  cd deployment/
+  582  ll
+  583  vim deployment.yaml 
+  584  kubectl create -f deployment.yaml 
+  585  kubectl get deployment  -o wide
+  586  kubectl describe deployment web-app-deployment 
+  587  kubectl get pods -o wide
+  588  ll
+  589  vim bg-deployment.yaml 
+  590  kubectl rollout history deployment/web-app-deployment 
+  591  kubectl delete deployment web-app-deployment
+  592  kubectl get pods -o wide 
+  593  kubectl delete pod --all 
+  594  kubectl get pods -o wide 
+  595  kubectl create -f deployment/deployment.yaml  --record
+  596  cd ..
+  597  cd -
+  598  kubectl create -f deployment/deployment.yaml  --record
+  599  kubectl rollout history deployment/web-app-deployment 
+  600  ll
+  601  kubectl edit deployment web-app-deployment  --record
+  602  kubectl rollout history deployment/web-app-deployment 
+  603  kubectl rollout status deployment/web-app-deployment 
+  604  kubectl get pods -o wide 
+  605  vim deployment/
+  606  vim deployment/deployment.yaml 
+  607  kubectl set image deployment web-app-deployment blue=varunmanik/httpd:v1-green --record
+  608  kubectl get pods -o wide 
+  609  kubectl set image deployment web-app-deployment blue=varunmanik/httpd:green --record
+  610  kubectl get pods -o wide 
+  611  kubectl rollout history deployment web-app-deployment 
+  612  kubectl scale deployment web-app-deployment --replicas=16
+  613  kubectl get pods -o wide 
+  614  kubectl scale deployment web-app-deployment --replicas=2
+  615  kubectl get pods -o wide 
+  616  ll
+  617  sudo apt install software-properties-common  apt-transport-https wget
+  618  du -sh 
+  619  lsblk 
+  620  df -h 
+  621  docker ps -a 
+  622  kubectl get pods -o wide --all-namespaces
+  623  kubectl delete replicaset sl-replicaset --namesapce kubernetes-dashboard
+  624  kubectl delete replicaset sl-replicaset --namespace kubernetes-dashboard
+  625  kubectl get pods -o wide --all-namespaces
+  626  sudo apt install software-properties-common  apt-transport-https wget
+  627  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+  628  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+  629  sudo apt install code
+  630  code
+  631  kubectl get pods -o wide 
+  632  kubectl scale deployment web-app-deployment --replicas=4
+  633  kubectl get pods -o wide 
+  634  kubectl get services/
+  635  kubectl get services
+  636  kubectl get services -o wide 
+  637  kubectl describe web-app-service
+  638  kubectl describe service web-app-service
+  639  kubectl scale deployment web-app-deployment --replicas=8
+  640  kubectl get services -o wide 
+  641  kubectl get services, pods -o wide
+  642  kubectl get services,pods -o wide
+  643  kubectl scale deployment web-app-deployment --replicas=1
+  644  kubectl get services,pods -o wide
+  645  kubectl rollout undo deployment/web-app-deployment --to-revision=1
+  646  kubectl get services,pods -o wide
+  647  kubectl get deployment
+  648  kubectl rollout history deployment/web-app-deployment
+  649  kubectl rollout undo deployment/web-app-deployment --to-revision=3
+  650  kubectl rollout history deployment/web-app-deployment
+  651  kubectl get namespaces 
+  652  kubectl get pods --namespace kube-system
+  653  kubectl get pods --namespace kube-system -o wid
+  654  kubectl get pods --namespace kube-system -o wide
+  655  kubectl get pods --namespace --all-namespace
+  656  kubectl get pods  --all-namespace
+  657  kubectl get pods  --all-namespaces
+  658  ll
+  659  history >> commands.tx 

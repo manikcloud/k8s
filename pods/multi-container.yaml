@@ -6,8 +6,8 @@ metadata:
   name: mulit-container
   labels:
     env: dev
+    tier: frontend  
     
-  
 
 spec:
   containers:
