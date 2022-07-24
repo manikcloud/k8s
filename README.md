@@ -259,6 +259,12 @@ kubectl rollout history deployment web-app-deployment
 # scaling 
 kubectl scale deployment web-app-deployment --replicas=6
 
+
+#Roll Out
+
+kubectl rollout undo deployment/web-app-deployment --to-revision=3
+kubectl rollout history deployment web-app-deployment 
+
 ```
 # Docker 
 ```
