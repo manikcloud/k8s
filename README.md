@@ -3,9 +3,9 @@ Kubernetes installation and basic setup
 
 # Kubernetes Installation and Cluster Setup
 
-```
+
 ## Steps to be followed:
-- 1.	Installing Kubernetes
+1.	Installing Kubernetes
 - 2.	Setting up a Kubernetes cluster
 
 ### Step 1: Installing Kubernetes
