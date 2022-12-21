@@ -207,7 +207,7 @@ kubectl -n kube-system describe secret $(
 awk '$1=="token:"{print $2}'
 
 ```
-## After executin the above commands, there are 4 distinct commands and they get called in this order:
+## After executing the above commands, there are 4 distinct commands and they get called in this order:
 
 - Line 1 - This is the second command from @silverfox's Token section.
 - Line 2 - This is the first command from @silverfox's Token section.
