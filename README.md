@@ -1,12 +1,11 @@
-# k8s
-Kubernetes installation and basic setup
+# k8s Kubernetes Installation and Cluster Setup
 
-# Kubernetes Installation and Cluster Setup
 
+- Kubernetes installation and basic setup
 
 ## Steps to be followed:
 1.	Installing Kubernetes
-- 2.	Setting up a Kubernetes cluster
+2.	Setting up a Kubernetes cluster
 
 ### Step 1: Installing Kubernetes
 - 1.1	To download and add the key to allow kubernetes installation, execute the commands mentioned below:
@@ -69,15 +68,12 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl versio
 ```
 kubectl get nodes
 ```
-## Basic Command
 
-```
 # Pod creation command
 ```
 kubectl run nginx --image=nginx
 
 kubectl run httpd --image=httpd
-
 
 ```
 # Installation command all in one
@@ -194,7 +190,7 @@ sudo kubectl get pods
 
 ```
 
-# Dashboard
+# Dashboard Creation in Kubernetes 
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml
@@ -212,14 +208,14 @@ kubectl -n kube-system describe secret $(
 awk '$1=="token:"{print $2}'
 
 ```
-There are 4 distinct commands and they get called in this order:
+## After executin the above commands, there are 4 distinct commands and they get called in this order:
 
 - Line 1 - This is the second command from @silverfox's Token section.
 - Line 2 - This is the first command from @silverfox's Token section.
 - Line 3 - Print only the first field of the line beginning with deployment-controller-token- (which is the pod name)
 - Line 5 - Print only the second field of the line whose first field is "token:"
 
-# ReplicaSet
+# ReplicaSet commands in K8S
 
 ```
 
@@ -240,62 +236,52 @@ kubectl get replicaset sl-replicaset
  
 kubectl get replicaset sl-replicaset
 ```
-# Deployment
+# Deployment commands in K8S
 ```
 kubectl create -f deployment/deployment.yaml 
 kubectl get pods -o wide
 
 kubectl get deployment
 kubectl get deployment -o wide
-
-
 kubectl describe deployment
-
 kubectl create -f deployment/deployment.yaml 
 kubectl get pods -o wide 
-
 kubectl rollout history deployment/web-app-deployment 
-
 kubectl delete deployment web-app-deployment
 kubectl get pods -o wide 
-
 kubectl create -f deployment/deployment.yaml  --record
 kubectl rollout history deployment/web-app-deployment 
-
 kubectl edit deployment web-app-deployment  --record
 kubectl rollout history deployment/web-app-deployment 
 kubectl rollout status deployment/web-app-deployment 
 kubectl get pods -o wide 
-
 kubectl describe deployment web-app-deployment 
 kubectl rollout status deployment/web-app-deployment 
-
 kubectl set image deployment web-app-deployment blue=varunmanik/httpd:v1-blue --record
 kubectl get pods -o wide
 kubectl rollout history deployment web-app-deployment 
-
-# scaling 
+```
+# scaling commands in K8S
+```	
 kubectl scale deployment web-app-deployment --replicas=6
+```
 
-
-#Roll Out
-
+# Roll Out
+```
 kubectl rollout undo deployment/web-app-deployment --to-revision=3
 kubectl rollout history deployment web-app-deployment 
-
-```
-# Docker 
-```
-- docker build -t varunmanik/httpd:green .
-- docker run -itd -p 9000:80 varunmanik/httpd:green
-- docker build -t varunmanik/httpd:blue .
-- docker run -itd -p 9001:80 varunmanik/httpd:blue
-
-- kubectl describe pod green-app | grep -i "IP:"
-
 ```
 
-# Services 
+# Docker testing in you K8S setup 
+```
+docker build -t varunmanik/httpd:green .
+docker run -itd -p 9000:80 varunmanik/httpd:green
+docker build -t varunmanik/httpd:blue .
+docker run -itd -p 9001:80 varunmanik/httpd:blue
+kubectl describe pod green-app | grep -i "IP:"
+```
+
+# Services commands in K8S 
 
 ```
 kubectl create -f services/service-def.yaml 
@@ -310,7 +296,7 @@ kubectl get svc,pods,deployment -o wide
 ```
 
 
-# Cleanup 
+# Cleanup the entire setup 
 
 - Run this command to cleanup
 ```
@@ -330,11 +316,14 @@ sudo rm -rf ~/.kube
 docker ps
 system restart docker 
 systemctl restart docker 
-
-history | cut -c 8- > history.txt
-
-
 ```
+
+# Check you history from below command
+	```
+history | cut -c 8- > history.txt
+```
+
+
 
 # References
 1. https://kubernetes.io/
