@@ -317,13 +317,11 @@ system restart docker
 systemctl restart docker 
 ```
 
-# Check you history from below command
+# Check your history from below command
 
 ```
 history | cut -c 8- > history.txt
 ```
-
-
 
 # References
 1. https://kubernetes.io/
