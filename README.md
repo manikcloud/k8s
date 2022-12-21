@@ -136,8 +136,7 @@ sudo kubectl get nodes
 ```
 # Pod Creation in Kubernetes
 
-```
-Steps to be followed:
+- Steps to be followed:
 1.	Creating multi-container pods
 2.	Creating a single container pod
 
