@@ -318,7 +318,8 @@ systemctl restart docker
 ```
 
 # Check you history from below command
-	```
+
+```
 history | cut -c 8- > history.txt
 ```
 
