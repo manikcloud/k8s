@@ -65,3 +65,21 @@ Now, you have installed Kops and set up a Kubernetes cluster in Ubuntu. You can 
 
 When entering the bash commands in the markdown file, ensure you start and end with three backticks. This signifies a code block in markdown.
 
+# ALL-in-One
+
+```
+
+wget https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+chmod +x kops-linux-amd64
+sudo mv kops-linux-amd64 /usr/local/bin/kops
+
+aws s3api create-bucket --bucket varunmanik-uniquevalue1 --region us-west-2
+aws s3api put-bucket-versioning --bucket varunmanik-uniquevalue --versioning-configuration Status=Enabled
+
+
+export KOPS_STATE_STORE=s3://varunmanik-uniquevalue1
+kops create cluster --name=varunmanikcluster.k8s.local --zones=us-east-1a --yes
+
+
+
+```
