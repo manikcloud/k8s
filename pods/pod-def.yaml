@@ -1,14 +1,12 @@
 apiVersion: v1
 
+
 kind: Pod
 
 metadata:
-  name: web2
-  labels:
-    application: web-app  
-  
+  name: pod-def
+
 spec:
   containers:
-    - name: httpd
-      image: httpd
-      
+    - name: web-blue
+      image: varunmanik/httpd:blue
