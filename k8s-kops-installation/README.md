@@ -57,6 +57,34 @@ If everything is set up correctly, you should see a message saying that your clu
 
 Remember to replace <your-cluster-name> with the name of your cluster.
 
+### Step 6: Access Your Cluster
+
+You can now access your cluster with kubectl:
+
+
+
+```
+
+kubectl get nodes
+
+```
+
+You should see your nodes listed.
+
+### Step 7: Delete the Cluster
+
+When you're done, don't forget to delete your cluster:
+
+```
+
+kops delete cluster --name varunmanikcluster.k8s.local --yes
+
+```
+
+This will clean up the resources you created for your cluster.
+
+
+
 ## Conclusion
 Now, you have installed Kops and set up a Kubernetes cluster in Ubuntu. You can start deploying your applications on it.
 
