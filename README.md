@@ -1,3 +1,38 @@
+# Kubernetes on AWS EC2 with Ubuntu - Resources and Scripts
+
+Welcome to our extensive repository of resources and scripts, tailored for deploying Kubernetes on AWS EC2 instances running Ubuntu. This collection is part of my ambassador contribution and is designed to aid both beginners and seasoned practitioners in their Kubernetes journey.
+
+As cloud computing and containerization continue to revolutionize the tech landscape, understanding how to leverage these technologies is crucial. This repository focuses on AWS, one of the leading cloud service providers, and demonstrates how to set up and manage Kubernetes clusters on EC2 instances, specifically with Ubuntu as the operating system.
+
+## Repository Overview
+
+Within this repository, you'll find a variety of materials that cover different aspects of Kubernetes, all within the context of AWS EC2 and Ubuntu:
+
+- **[ReplicaSet](https://github.com/manikcloud/k8s/tree/main/ReplicaSet):** YAML configurations for Kubernetes ReplicaSets, demonstrating the management of replica Pods.
+- **[Deployment](https://github.com/manikcloud/k8s/tree/main/deployment):** Advanced deployment configurations to explore Kubernetes deployments on AWS EC2.
+- **[Docker](https://github.com/manikcloud/k8s/tree/main/docker):** Scripts and Dockerfiles for building and managing Docker containers, a key component of Kubernetes workloads on Ubuntu systems.
+- **[Installation](https://github.com/manikcloud/k8s/tree/main/installation):** Scripts to simplify the installation of Kubernetes and Docker on Ubuntu, specifically tailored for AWS EC2 environments.
+- **[K8s-Kops-Installation](https://github.com/manikcloud/k8s/tree/main/k8s-kops-installation):** Resources for managing Kubernetes clusters using `kops`, with a focus on AWS.
+- **[Pods](https://github.com/manikcloud/k8s/tree/main/pods):** Configurations for various types of Kubernetes Pods, showcasing pod deployment on AWS EC2.
+- **[Resources](https://github.com/manikcloud/k8s/tree/main/resources):** A collection of Kubernetes resource configurations, essential for AWS-based Kubernetes architecture.
+- **[Services](https://github.com/manikcloud/k8s/tree/main/services):** Kubernetes Services configurations for exposing applications on EC2 instances.
+
+## Getting Started
+
+For a detailed guide on setting up a Kubernetes cluster on AWS EC2 using Ubuntu, check out our comprehensive blog post: ["Setting Up a Kubernetes Cluster on AWS EC2 with Ubuntu 22.04 LTS and Kubeadm"](https://varunmanik1.medium.com/setting-up-a-kubernetes-cluster-on-aws-ec2-with-ubuntu-22-04-lts-and-kubeadm-5c54930a4659?source=user_profile---------0----------------------------).
+
+## Contribution
+
+As a part of the ambassador program, I encourage community contributions to this repository. Feel free to enhance existing scripts, add new resources, or improve documentation, keeping in line with the theme of Kubernetes on AWS EC2 and Ubuntu.
+
+Happy Kubernetes-ing on AWS!
+
+---
+
+*Disclaimer: The content in this repository is for educational purposes and should be used with caution. Always review and test configurations in non-production environments.*
+---
+
+
 # k8s Kubernetes Installation and Cluster Setup
 
 
